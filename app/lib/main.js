@@ -5,6 +5,6 @@ import utils from './utils'
 let api = new RedditApi();
 
 api.load()
-    .then(posts => utils.extractUrlsFromPosts(posts))
-    .then(urls => console.log(urls))
+    .then(utils.extractUrlsFromPosts)
+    .then(utils.injectImages)
     .catch(err => console.log('Error: ',err));
