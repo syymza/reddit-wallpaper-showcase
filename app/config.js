@@ -10,6 +10,7 @@ System.config({
 
 System.config({
   "map": {
+    "angular/bower-angular": "github:angular/bower-angular@1.3.15",
     "angular/bower-material": "github:angular/bower-material@0.8.3",
     "jsonp": "npm:jsonp@0.2.0",
     "traceur": "github:jmcriffey/bower-traceur@0.0.88",
