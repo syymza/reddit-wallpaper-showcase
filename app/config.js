@@ -10,9 +10,22 @@ System.config({
 
 System.config({
   "map": {
+    "angular/bower-material": "github:angular/bower-material@0.8.3",
     "jsonp": "npm:jsonp@0.2.0",
     "traceur": "github:jmcriffey/bower-traceur@0.0.88",
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88",
+    "github:angular/bower-angular-animate@1.3.15": {
+      "angular": "github:angular/bower-angular@1.3.15"
+    },
+    "github:angular/bower-angular-aria@1.3.15": {
+      "angular": "github:angular/bower-angular@1.3.15"
+    },
+    "github:angular/bower-material@0.8.3": {
+      "angular": "github:angular/bower-angular@1.3.15",
+      "angular-animate": "github:angular/bower-angular-animate@1.3.15",
+      "angular-aria": "github:angular/bower-angular-aria@1.3.15",
+      "css": "github:systemjs/plugin-css@0.1.10"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -36,6 +49,9 @@ System.config({
       "url": "github:jspm/nodelibs-url@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
+    "github:jspm/nodelibs-https@0.1.0": {
+      "https-browserify": "npm:https-browserify@0.0.0"
+    },
     "github:jspm/nodelibs-net@0.1.2": {
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "crypto": "github:jspm/nodelibs-crypto@0.1.0",
@@ -45,6 +61,9 @@ System.config({
       "stream": "github:jspm/nodelibs-stream@0.1.0",
       "timers": "github:jspm/nodelibs-timers@0.1.0",
       "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "github:jspm/nodelibs-os@0.1.0": {
+      "os-browserify": "npm:os-browserify@0.1.2"
     },
     "github:jspm/nodelibs-path@0.1.0": {
       "path-browserify": "npm:path-browserify@0.0.0"
@@ -69,6 +88,17 @@ System.config({
     },
     "github:jspm/nodelibs-vm@0.1.0": {
       "vm-browserify": "npm:vm-browserify@0.0.4"
+    },
+    "github:systemjs/plugin-css@0.1.10": {
+      "clean-css": "npm:clean-css@3.1.9",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0"
+    },
+    "npm:amdefine@0.1.0": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "module": "github:jspm/nodelibs-module@0.1.0",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:asn1.js@1.0.4": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
@@ -114,6 +144,25 @@ System.config({
       "base64-js": "npm:base64-js@0.0.8",
       "ieee754": "npm:ieee754@1.1.4",
       "is-array": "npm:is-array@1.0.1"
+    },
+    "npm:clean-css@3.1.9": {
+      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
+      "commander": "npm:commander@2.6.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "http": "github:jspm/nodelibs-http@1.7.1",
+      "https": "github:jspm/nodelibs-https@0.1.0",
+      "os": "github:jspm/nodelibs-os@0.1.0",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.1",
+      "source-map": "npm:source-map@0.1.43",
+      "url": "github:jspm/nodelibs-url@0.1.0",
+      "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:commander@2.6.0": {
+      "child_process": "github:jspm/nodelibs-child_process@0.1.0",
+      "events": "github:jspm/nodelibs-events@0.1.0",
+      "path": "github:jspm/nodelibs-path@0.1.0",
+      "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:constants-browserify@0.0.1": {
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
@@ -185,6 +234,9 @@ System.config({
     "npm:hash.js@1.0.2": {
       "inherits": "npm:inherits@2.0.1"
     },
+    "npm:https-browserify@0.0.0": {
+      "http": "github:jspm/nodelibs-http@1.7.1"
+    },
     "npm:inherits@2.0.1": {
       "util": "github:jspm/nodelibs-util@0.1.0"
     },
@@ -194,6 +246,9 @@ System.config({
     "npm:miller-rabin@1.1.5": {
       "bn.js": "npm:bn.js@1.3.0",
       "brorand": "npm:brorand@1.0.5"
+    },
+    "npm:os-browserify@0.1.2": {
+      "os": "github:jspm/nodelibs-os@0.1.0"
     },
     "npm:parse-asn1@3.0.0": {
       "asn1.js": "npm:asn1.js@1.0.4",
@@ -261,6 +316,12 @@ System.config({
       "buffer": "github:jspm/nodelibs-buffer@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "inherits": "npm:inherits@2.0.1",
+      "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:source-map@0.1.43": {
+      "amdefine": "npm:amdefine@0.1.0",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "path": "github:jspm/nodelibs-path@0.1.0",
       "process": "github:jspm/nodelibs-process@0.1.1"
     },
     "npm:stream-browserify@1.0.0": {

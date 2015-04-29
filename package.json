@@ -13,6 +13,7 @@
       "baseURL": "app"
     },
     "dependencies": {
+      "angular/bower-material": "github:angular/bower-material@^0.8.3",
       "jsonp": "npm:jsonp@^0.2.0"
     },
     "devDependencies": {
