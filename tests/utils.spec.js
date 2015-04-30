@@ -30,7 +30,7 @@ describe("Unit: utils", () => {
         }
       }];
       let urls = utils.extractUrlsFromPosts(posts);
-      expect(urls).not.toContain('http://www.google.com/image1.jpeg');
+      expect(urls).not.toContain('http://www.google.com/image2.jpeg');
     });
   });
 });
