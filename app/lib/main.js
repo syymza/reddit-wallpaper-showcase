@@ -2,7 +2,7 @@ import RedditApi from './RedditApi'
 import utils from './utils'
 
 
-let api = new RedditApi();
+let api = new RedditApi('/r/EarthPorn');
 
 api.load()
     .then(utils.extractUrlsFromPosts)

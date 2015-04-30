@@ -1,9 +1,9 @@
 import jsonp from 'jsonp'
 
 export default class RedditApi {
-    constructor() {
+    constructor(subreddit) {
         this.redditURL = "http://www.reddit.com";
-        this.subreddit = "/r/EarthPorn";
+        this.subreddit = subreddit;
     }
 
     load() {
