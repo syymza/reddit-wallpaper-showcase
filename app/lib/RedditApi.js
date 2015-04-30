@@ -2,7 +2,7 @@ import jsonp from 'jsonp'
 
 export default class RedditApi {
     constructor(subreddit) {
-        this.redditURL = "http://www.reddit.com";
+        this.redditURL = 'http://www.reddit.com';
         this.subreddit = subreddit;
     }
 
