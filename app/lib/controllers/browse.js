@@ -1,13 +1,13 @@
 'use strict';
 
-import angular from 'angular/bower-angular'
 import RedditApi from '../RedditApi'
 import utils from '../utils'
 
-export default function ($scope)  {
+export default function ($scope, $routeParams)  {
 
     let self = this;
-    let api = new RedditApi('/r/EarthPorn');
+    let subreddit = `/r/${$routeParams.subreddit || 'EarthPorn'}`;
+    let api = new RedditApi(subreddit);
 
     self.wallpapers = [];
 

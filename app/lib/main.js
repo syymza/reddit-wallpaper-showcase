@@ -20,5 +20,12 @@ angular
                 templateUrl: 'views/browse.html',
                 controller: 'BrowseController as browseController'
             })
+            .when('/browse/:subreddit?', {
+                templateUrl: 'views/browse.html',
+                controller: 'BrowseController as browseController'
+            })
+            .otherwise({
+                redirectTo: '/' //TODO: Add 404
+            });
     })
     .controller("BrowseController", BrowseController);
