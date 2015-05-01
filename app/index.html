@@ -12,12 +12,12 @@
 </head>
 <body layout="column" ng-app="redditWallpapersApp" ng-cloak="">
 
-    <div  ng-include="'views/nav.html'"></div>
 
+    <md-toolbar>
+        <h1>Reddit Wallpapers Showcase</h1>
+    </md-toolbar>
 
-    <div id="wallpapers">
-
-    </div>
+    <md-content flex ng-view=""></md-content>
 
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>

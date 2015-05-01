@@ -11,6 +11,7 @@ System.config({
 System.config({
   "map": {
     "angular/bower-angular": "github:angular/bower-angular@1.3.15",
+    "angular/bower-angular-route": "github:angular/bower-angular-route@1.3.15",
     "angular/bower-material": "github:angular/bower-material@0.8.3",
     "jsonp": "npm:jsonp@0.2.0",
     "traceur": "github:jmcriffey/bower-traceur@0.0.88",
@@ -19,6 +20,9 @@ System.config({
       "angular": "github:angular/bower-angular@1.3.15"
     },
     "github:angular/bower-angular-aria@1.3.15": {
+      "angular": "github:angular/bower-angular@1.3.15"
+    },
+    "github:angular/bower-angular-route@1.3.15": {
       "angular": "github:angular/bower-angular@1.3.15"
     },
     "github:angular/bower-material@0.8.3": {

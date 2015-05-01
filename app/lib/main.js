@@ -1,19 +1,24 @@
-import RedditApi from './RedditApi'
-import utils from './utils'
+"use strict";
+
 import angular from 'angular/bower-angular'
-import material from 'angular/bower-material'
+import ngMaterial from 'angular/bower-material'
+import ngRouter from 'angular/bower-angular-route'
+
+import BrowseController from './controllers/browse'
+
 
 angular
-    .module('redditWallpapersApp', ['ngMaterial'])
+    .module('redditWallpapersApp', ['ngMaterial', 'ngRoute'])
     .config($mdThemingProvider => {
         $mdThemingProvider.theme('default')
             .primaryPalette('teal')
             .accentPalette('red');
-    });
-
-let api = new RedditApi('/r/EarthPorn');
-
-api.load()
-    .then(utils.extractUrlsFromPosts)
-    .then(utils.injectImages)
-    .catch(err => console.log('Error: ', err));
+    })
+    .config($routeProvider => {
+        $routeProvider
+            .when('/', {
+                templateUrl: 'views/browse.html',
+                controller: 'BrowseController as browseController'
+            })
+    })
+    .controller("BrowseController", BrowseController);
