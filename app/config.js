@@ -13,6 +13,7 @@ System.config({
     "angular/bower-angular": "github:angular/bower-angular@1.3.15",
     "angular/bower-angular-route": "github:angular/bower-angular-route@1.3.15",
     "angular/bower-material": "github:angular/bower-material@0.8.3",
+    "font-awesome": "npm:font-awesome@4.3.0",
     "jsonp": "npm:jsonp@0.2.0",
     "traceur": "github:jmcriffey/bower-traceur@0.0.88",
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88",
@@ -235,6 +236,9 @@ System.config({
     },
     "npm:events-browserify@0.0.1": {
       "process": "github:jspm/nodelibs-process@0.1.1"
+    },
+    "npm:font-awesome@4.3.0": {
+      "css": "github:systemjs/plugin-css@0.1.10"
     },
     "npm:hash.js@1.0.2": {
       "inherits": "npm:inherits@2.0.1"

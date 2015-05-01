@@ -3,9 +3,10 @@
 import angular from 'angular/bower-angular'
 import ngMaterial from 'angular/bower-material'
 import ngRouter from 'angular/bower-angular-route'
+import fontAwesome from 'font-awesome'
 
 import BrowseController from './controllers/browse'
-
+import ToolbarController from './controllers/toolbar'
 
 angular
     .module('redditWallpapersApp', ['ngMaterial', 'ngRoute'])
@@ -28,4 +29,5 @@ angular
                 redirectTo: '/' //TODO: Add 404
             });
     })
-    .controller("BrowseController", BrowseController);
+    .controller("BrowseController", BrowseController)
+    .controller("ToolbarController", ToolbarController);

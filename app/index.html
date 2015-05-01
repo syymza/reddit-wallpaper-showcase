@@ -12,12 +12,28 @@
 </head>
 <body layout="column" ng-app="redditWallpapersApp" ng-cloak="">
 
+    <md-sidenav md-component-id="left">
+        Left Nav!
+    </md-sidenav>
 
-    <md-toolbar>
-        <h1>Reddit Wallpapers Showcase</h1>
-    </md-toolbar>
+    <div layout="column" tabindex="-1" role="main" flex>
 
-    <md-content flex ng-view=""></md-content>
+
+
+        <md-toolbar ng-controller="ToolbarController as toolbarController">
+            <div class="md-toolbar-tools">
+                <md-button ng-click="toolbarController.openSidenav()">
+                    <md-icon md-svg-src="./assets/menu.svg" alt="Open Side Navigation"></md-icon>
+                </md-button>
+                <h1>Reddit Wallpapers Showcase</h1>
+            </div>
+        </md-toolbar>
+
+        <md-content flex ng-view=""></md-content>
+
+    </div>
+
+
 
     <script src="jspm_packages/system.js"></script>
     <script src="config.js"></script>
