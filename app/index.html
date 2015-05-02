@@ -21,46 +21,15 @@
 </head>
 <body layout="column" ng-app="redditWallpapersApp" ng-cloak="">
 
-    <md-sidenav md-component-id="left">
-        <!-- TODO: move to separate file -->
-        <div ng-controller="SideNaVController as sideNavController">
-            <md-toolbar>
-                <div class="md-toolbar-tools">
-                    <h1>Choose a sub-reddit:</h1>
-                </div>
-            </md-toolbar>
-            <md-content>
-                <md-list>
-
-                    <md-list-item class="subreddit"
-                                  ng-class="{active: subreddit === sideNavController.active}"
-                                  ng-repeat-start="subreddit in sideNavController.subreddits"
-                                  ng-click="sideNavController.goTo(subreddit)"
-                            >
-                        <span>/r/{{subreddit}}</span>
-                    </md-list-item>
-                    <md-divider ng-repeat-end></md-divider>
-                </md-list>
-            </md-content>
-        </div>
-    </md-sidenav>
+    <md-sidenav md-component-id="left" ng-include="'./views/components/sidenav.html'"></md-sidenav>
 
     <div layout="column" tabindex="-1" role="main" flex>
 
-        <md-toolbar ng-controller="ToolbarController as toolbarController">
-            <!-- TODO: move to separate file -->
-            <div class="md-toolbar-tools">
-                <md-button ng-click="toolbarController.openSidenav()">
-                    <md-icon md-svg-src="./assets/menu.svg" alt="Open Side Navigation" aria-label="Toggle Menu"></md-icon>
-                </md-button>
-                <h1>Reddit Wallpapers Showcase</h1>
-            </div>
-        </md-toolbar>
+        <md-toolbar ng-include="'./views/components/toolbar.html'"></md-toolbar>
 
         <md-content flex ng-view=""></md-content>
 
     </div>
-
 
 
     <script src="jspm_packages/system.js"></script>

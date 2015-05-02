@@ -1,0 +1,20 @@
+<div ng-controller="SideNaVController as sideNavController">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h1>Choose a sub-reddit:</h1>
+        </div>
+    </md-toolbar>
+    <md-content>
+        <md-list>
+
+            <md-list-item class="subreddit"
+                          ng-class="{active: subreddit === sideNavController.active}"
+                          ng-repeat-start="subreddit in sideNavController.subreddits"
+                          ng-click="sideNavController.goTo(subreddit)"
+                    >
+                <span>/r/{{subreddit}}</span>
+            </md-list-item>
+            <md-divider ng-repeat-end></md-divider>
+        </md-list>
+    </md-content>
+</div>
