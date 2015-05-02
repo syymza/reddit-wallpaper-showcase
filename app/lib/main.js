@@ -16,7 +16,7 @@ angular
             .primaryPalette('teal')
             .accentPalette('red');
     })
-    .config($routeProvider => {
+    .config($routeProvider => { //TODO: Move router to external file
         $routeProvider
             .when('/', {
                 templateUrl: 'views/browse.html',
