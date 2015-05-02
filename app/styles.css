@@ -20,3 +20,22 @@ html, body {
     height: 100vh;
     object-fit: cover;
 }
+
+md-sidenav md-list-item.subreddit {
+    cursor: pointer;
+    display: block;
+    line-height: 40px;
+    max-height: 40px;
+    overflow: hidden;
+    font-weight: 400;
+    padding: 0 16px 0 32px;
+}
+
+md-sidenav md-list-item.subreddit:hover {
+    background-color: rgba(158, 158, 158, 0.2);
+}
+
+md-sidenav md-list-item.subreddit.active {
+    color: #03a9f4;
+}
+

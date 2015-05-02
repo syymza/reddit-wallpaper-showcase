@@ -13,12 +13,32 @@
 <body layout="column" ng-app="redditWallpapersApp" ng-cloak="">
 
     <md-sidenav md-component-id="left">
-        Left Nav!
+        <!-- TODO: add controller -->
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h1>Choose a sub-reddit:</h1>
+            </div>
+        </md-toolbar>
+        <md-content>
+            <md-list>
+                <!-- TODO: get it from the  controller -->
+                <md-list-item class="subreddit active">
+                    <span>/r/EarthPorn</span>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-list-item class="subreddit">
+                    <span>/r/SeaPorn</span>
+                </md-list-item>
+                <md-divider ></md-divider>
+                <md-list-item class="subreddit">
+                    <span>/r/HumanPorn</span>
+                </md-list-item>
+                <md-divider ></md-divider>
+            </md-list>
+        </md-content>
     </md-sidenav>
 
     <div layout="column" tabindex="-1" role="main" flex>
-
-
 
         <md-toolbar ng-controller="ToolbarController as toolbarController">
             <div class="md-toolbar-tools">
