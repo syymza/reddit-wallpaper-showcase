@@ -7,6 +7,7 @@ import fontAwesome from 'font-awesome'
 
 import BrowseController from './controllers/browse'
 import ToolbarController from './controllers/toolbar'
+import SideNaVController from './controllers/sidenav'
 
 angular
     .module('redditWallpapersApp', ['ngMaterial', 'ngRoute'])
@@ -30,4 +31,5 @@ angular
             });
     })
     .controller("BrowseController", BrowseController)
-    .controller("ToolbarController", ToolbarController);
+    .controller("ToolbarController", ToolbarController)
+    .controller("SideNaVController", SideNaVController);

@@ -8,7 +8,7 @@ export default class RedditApi {
 
     load() {
         return new Promise((resolve, reject) => {
-            let url = `${this.redditURL + this.subreddit}/top.json?sort=top&t=week`;
+            let url = `${this.redditURL + this.subreddit}/top.json?sort=top&t=week&limit=20`;
             jsonp(url, {param: 'jsonp'}, (err, data) => {
                 err ? reject(err) : resolve(data.data.children)
             })
