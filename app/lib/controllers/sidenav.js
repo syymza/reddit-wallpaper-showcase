@@ -1,31 +1,14 @@
 'use strict';
 
-export default function ($location, $mdSidenav)  {
+export default function ($location, $mdSidenav, Subreddit)  {
 
     let self = this;
 
-    //TODO: Use subreddit Factory
-
-    self.subreddits = [
-        'BeachPorn',
-        'EarthPorn',
-        'ExposurePorn',
-        'ITookAPicture',
-        'PhotoCritique',
-        'SeaPorn',
-        'SkyPorn',
-        'SpacePorn',
-        'Wallpaper',
-        'Wallpapers',
-        'WaterPorn'
-
-    ].sort();
-
-    //TODO[BUG]: If I refresh the page this initialization is wrong.
-    self.active = self.subreddits[0];
+    self.subreddits = Subreddit.list;
+    self.getActive = Subreddit.getActive;
 
     self.goTo = (subreddit) => {
-        self.active = subreddit;
+        Subreddit.setActive(subreddit);
         $location.path(`browse/${subreddit}`);
         $mdSidenav('left').toggle();
 

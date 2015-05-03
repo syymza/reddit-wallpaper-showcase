@@ -3,11 +3,18 @@
 import RedditApi from '../RedditApi'
 import utils from '../utils'
 
-export default function ($scope, $routeParams)  {
+export default function ($scope, $routeParams, Subreddit)  {
 
     let self = this;
-    let subreddit = `/r/${$routeParams.subreddit || 'EarthPorn'}`;
-    let api = new RedditApi(subreddit);
+    let subreddit = Subreddit.getActive();
+
+    //Override default reddit if the url contains one
+    if ($routeParams.subreddit) {
+        subreddit = $routeParams.subreddit;
+        Subreddit.setActive(subreddit);
+    }
+
+    let api = new RedditApi(`/r\/${subreddit}`);
 
     self.wallpapers = [];
 

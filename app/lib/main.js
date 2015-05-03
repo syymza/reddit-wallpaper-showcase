@@ -9,6 +9,8 @@ import BrowseController from './controllers/browse'
 import ToolbarController from './controllers/toolbar'
 import SideNaVController from './controllers/sidenav'
 
+import Subreddit from './services/subreddit'
+
 angular
     .module('redditWallpapersApp', ['ngMaterial', 'ngRoute'])
     .config($mdThemingProvider => {
@@ -30,6 +32,7 @@ angular
                 redirectTo: '/' //TODO: Add 404
             });
     })
+    .factory("Subreddit", Subreddit)
     .controller("BrowseController", BrowseController)
     .controller("ToolbarController", ToolbarController)
     .controller("SideNaVController", SideNaVController);

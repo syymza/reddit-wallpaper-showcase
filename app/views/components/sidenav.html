@@ -8,7 +8,7 @@
         <md-list>
 
             <md-list-item class="subreddit"
-                          ng-class="{active: subreddit === sideNavController.active}"
+                          ng-class="{active: subreddit === sideNavController.getActive()}"
                           ng-repeat-start="subreddit in sideNavController.subreddits"
                           ng-click="sideNavController.goTo(subreddit)"
                     >
