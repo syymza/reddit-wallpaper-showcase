@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>Reddit Wallpapers Showcase</title>
-    <link rel="stylesheet" media="all" type="text/css" href="styles.css" />
+    <link rel="stylesheet" media="all" type="text/css" href="app/styles.css" />
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'>
 
     <style type="text/css">
@@ -21,19 +21,19 @@
 </head>
 <body layout="column" ng-app="redditWallpapersApp" ng-cloak="">
 
-    <md-sidenav md-component-id="left" ng-include="'./views/components/sidenav.html'"></md-sidenav>
+    <md-sidenav md-component-id="left" ng-include="'./app/views/components/sidenav.html'"></md-sidenav>
 
     <div layout="column" tabindex="-1" role="main" flex>
 
-        <md-toolbar ng-include="'./views/components/toolbar.html'"></md-toolbar>
+        <md-toolbar ng-include="'./app/views/components/toolbar.html'"></md-toolbar>
 
         <md-content flex ng-view=""></md-content>
 
     </div>
 
 
-    <script src="jspm_packages/system.js"></script>
-    <script src="config.js"></script>
+    <script src="./app/jspm_packages/system.js"></script>
+    <script src="./app/config.js"></script>
     <script>
         System.import('lib/main');
     </script>

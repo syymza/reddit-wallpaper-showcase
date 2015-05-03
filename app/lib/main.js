@@ -21,11 +21,11 @@ angular
     .config($routeProvider => { //TODO: Move router to external file
         $routeProvider
             .when('/', {
-                templateUrl: 'views/browse.html',
+                templateUrl: 'app/views/browse.html',
                 controller: 'BrowseController as browseController'
             })
             .when('/browse/:subreddit?', {
-                templateUrl: 'views/browse.html',
+                templateUrl: 'app/views/browse.html',
                 controller: 'BrowseController as browseController'
             })
             .otherwise({
