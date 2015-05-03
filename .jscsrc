@@ -1,5 +1,5 @@
 {
   "preset": "crockford",
   "esnext": true,
-  "excludeFiles": ["./app/config.js"]
+  "excludeFiles": ["./app/config.js", "./app/lib/main-bundle.js"]
 }

@@ -1,4 +1,6 @@
 .idea
-jspm_packages
+#jspm_packages
 node_modules
 karma_html
+app/jspm_packages/github
+app/jspm_packages/npm

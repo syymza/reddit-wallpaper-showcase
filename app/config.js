@@ -5,6 +5,110 @@ System.config({
     "*": "*.js",
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js"
+  },
+  "bundles": {
+    "lib/main-bundle": [
+      "github:angular/bower-angular@1.3.15/angular",
+      "github:angular/bower-material@0.8.3/angular-material.css!github:systemjs/plugin-css@0.1.10",
+      "github:angular/bower-angular-animate@1.3.15/angular-animate",
+      "github:angular/bower-angular-aria@1.3.15/angular-aria",
+      "github:angular/bower-angular-route@1.3.15/angular-route",
+      "npm:font-awesome@4.3.0/css/font-awesome.css!github:systemjs/plugin-css@0.1.10",
+      "npm:ms@0.7.0/index",
+      "lib/utils",
+      "lib/controllers/toolbar",
+      "lib/controllers/sidenav",
+      "lib/services/subreddit",
+      "github:angular/bower-angular@1.3.15",
+      "github:angular/bower-angular-animate@1.3.15",
+      "github:angular/bower-angular-aria@1.3.15",
+      "github:angular/bower-angular-route@1.3.15",
+      "npm:font-awesome@4.3.0",
+      "npm:ms@0.7.0",
+      "github:angular/bower-material@0.8.3/angular-material",
+      "npm:debug@2.1.3/debug",
+      "github:angular/bower-material@0.8.3",
+      "npm:debug@2.1.3/browser",
+      "npm:debug@2.1.3",
+      "npm:jsonp@0.2.0/index",
+      "npm:jsonp@0.2.0",
+      "lib/RedditApi",
+      "lib/controllers/browse",
+      "lib/main"
+    ]
+  }
+});
+
+System.config({
+  "depCache": {
+    "github:angular/bower-angular-animate@1.3.15/angular-animate": [
+      "github:angular/bower-angular@1.3.15"
+    ],
+    "github:angular/bower-angular-aria@1.3.15/angular-aria": [
+      "github:angular/bower-angular@1.3.15"
+    ],
+    "github:angular/bower-angular-route@1.3.15/angular-route": [
+      "github:angular/bower-angular@1.3.15"
+    ],
+    "github:angular/bower-angular@1.3.15": [
+      "github:angular/bower-angular@1.3.15/angular"
+    ],
+    "github:angular/bower-angular-animate@1.3.15": [
+      "github:angular/bower-angular-animate@1.3.15/angular-animate"
+    ],
+    "github:angular/bower-angular-aria@1.3.15": [
+      "github:angular/bower-angular-aria@1.3.15/angular-aria"
+    ],
+    "github:angular/bower-angular-route@1.3.15": [
+      "github:angular/bower-angular-route@1.3.15/angular-route"
+    ],
+    "npm:font-awesome@4.3.0": [
+      "npm:font-awesome@4.3.0/css/font-awesome.css!github:systemjs/plugin-css@0.1.10"
+    ],
+    "npm:ms@0.7.0": [
+      "npm:ms@0.7.0/index"
+    ],
+    "github:angular/bower-material@0.8.3/angular-material": [
+      "github:angular/bower-material@0.8.3/angular-material.css!github:systemjs/plugin-css@0.1.10",
+      "github:angular/bower-angular@1.3.15",
+      "github:angular/bower-angular-animate@1.3.15",
+      "github:angular/bower-angular-aria@1.3.15"
+    ],
+    "npm:debug@2.1.3/debug": [
+      "npm:ms@0.7.0"
+    ],
+    "github:angular/bower-material@0.8.3": [
+      "github:angular/bower-material@0.8.3/angular-material"
+    ],
+    "npm:debug@2.1.3/browser": [
+      "npm:debug@2.1.3/debug"
+    ],
+    "npm:debug@2.1.3": [
+      "npm:debug@2.1.3/browser"
+    ],
+    "npm:jsonp@0.2.0/index": [
+      "npm:debug@2.1.3"
+    ],
+    "npm:jsonp@0.2.0": [
+      "npm:jsonp@0.2.0/index"
+    ],
+    "lib/RedditApi": [
+      "npm:jsonp@0.2.0"
+    ],
+    "lib/controllers/browse": [
+      "lib/RedditApi",
+      "lib/utils"
+    ],
+    "lib/main": [
+      "github:angular/bower-angular@1.3.15",
+      "github:angular/bower-material@0.8.3",
+      "github:angular/bower-angular-route@1.3.15",
+      "npm:font-awesome@4.3.0",
+      "lib/controllers/browse",
+      "lib/controllers/toolbar",
+      "lib/controllers/sidenav",
+      "lib/services/subreddit"
+    ]
   }
 });
 
